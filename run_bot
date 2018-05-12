@@ -1,5 +1,5 @@
 #!/bin/bash
 
 ts=$(date +%s)
-pkill nodejs bot.js
+pkill "nodejs bot.js"
 nodejs bot.js >> platbot-$ts.log &
