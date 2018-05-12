@@ -1,3 +1,4 @@
 #!/bin/bash
 
-nodejs bot.js >> log.txt &
+ts=$(date +%s)
+nodejs bot.js >> platbot-$ts.log &
