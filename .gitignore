@@ -1,3 +1,4 @@
+start_prod_bot.sh
 node_modules/*
 data/*
 logs/*
