@@ -4,48 +4,48 @@ var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs');
 
-var utils = require('./utils.js');
-var relic_table_builder = require('./build_relic_tables.js');
+var utils = require('./src/utils.js');
+var relic_table_builder = require('./src/build_relic_tables.js');
 
 // Helper functions.
 function load_admin_channels(){
     var admin_channels = 
-        fs.readFileSync('admin_channels.txt', 'utf8')
+        fs.readFileSync('data/admin_channels.txt', 'utf8')
         .split('\n').filter((x) => x != '');
     return admin_channels;
 }
 
 function load_pricemods(){
 
-    if (!fs.existsSync('pricemods.json')){
-        fs.writeFileSync('pricemods.json', '{}', 'utf8');
+    if (!fs.existsSync('data/pricemods.json')){
+        fs.writeFileSync('data/pricemods.json', '{}', 'utf8');
         return {};
     }
 
-    var pricemods = JSON.parse(fs.readFileSync('pricemods.json', 'utf8'));
+    var pricemods = JSON.parse(fs.readFileSync('data/pricemods.json', 'utf8'));
     return pricemods;
 }
 
 function save_pricemods(pricemods){
-    fs.writeFileSync('pricemods.json', JSON.stringify(pricemods) + '\n', 'utf8');
+    fs.writeFileSync('data/pricemods.json', JSON.stringify(pricemods) + '\n', 'utf8');
 }
 
 function load_relics_table(){
-    if (!fs.existsSync('relic_table.json')){
+    if (!fs.existsSync('data/relic_table.json')){
         relic_table_builder.update_relic_info();
     }
 
-    var relic_table = JSON.parse(fs.readFileSync('relic_table.json'));
+    var relic_table = JSON.parse(fs.readFileSync('data/relic_table.json'));
 
     return relic_table;
 }
 
 function load_parts_table(){
-    if (!fs.existsSync('parts_table.json')){
+    if (!fs.existsSync('data/parts_table.json')){
         relic_table_builder.update_relic_info();
     }
 
-    var parts_table = JSON.parse(fs.readFileSync('parts_table.json'));
+    var parts_table = JSON.parse(fs.readFileSync('data/parts_table.json'));
 
     return parts_table;
 }
