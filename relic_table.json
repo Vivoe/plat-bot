@@ -1,0 +1,3314 @@
+{
+  "Lith B2": {
+    "drops": [
+      "Forma Blueprint",
+      "Paris Prime Lower Limb",
+      "Tigris Prime Stock",
+      "Braton Prime Receiver",
+      "Orthos Prime Blade",
+      "Ballistica Prime Blueprint"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "A",
+        "chance": "3.16%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "A",
+        "chance": "9.17%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Lith C2": {
+    "drops": [
+      "Bronco Prime Receiver",
+      "Paris Prime Upper Limb",
+      "Venka Prime Blades",
+      "Akbolto Prime Barrel",
+      "Nami Skyla Prime Handle",
+      "Cernos Prime Lower Limb"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "A",
+        "chance": "9.17%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Lith H2": {
+    "drops": [
+      "Zephyr Prime Neuroptics",
+      "Forma Blueprint",
+      "Lex Prime Barrel",
+      "Orthos Prime Blueprint",
+      "Oberon Prime Blueprint",
+      "Helios Prime Cerebrum"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "10-30",
+        "rotation": "B",
+        "chance": "10.69%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Ghoul",
+        "tier": " Bounty15-25",
+        "rotation": "A",
+        "chance": "10.29%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "A",
+        "chance": "9.17%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Lith N3": {
+    "drops": [
+      "Sybaris Prime Stock",
+      "Burston Prime Receiver",
+      "Valkyr Prime Blueprint",
+      "Braton Prime Blueprint",
+      "Forma Blueprint",
+      "Nekros Prime Blueprint"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Capture",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "0.29%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "A",
+        "chance": "3.16%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "A",
+        "chance": "9.17%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Lith S7": {
+    "drops": [
+      "Galatine Prime Blade",
+      "Lex Prime Blueprint",
+      "Mirage Prime Chassis",
+      "Akbolto Prime Link",
+      "Paris Prime Grip",
+      "Sybaris Prime Barrel"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "A",
+        "chance": "9.17%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Lith T1": {
+    "drops": [
+      "Akbronco Prime Blueprint",
+      "Burston Prime Blueprint",
+      "Forma Blueprint",
+      "Ballistica Prime Upper Limb",
+      "Valkyr Prime Neuroptics",
+      "Tigris Prime Blueprint"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "A",
+        "chance": "3.16%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "A",
+        "chance": "9.17%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Lith V3": {
+    "drops": [
+      "Paris Prime Lower Limb",
+      "Cernos Prime Upper Limb",
+      "Braton Prime Blueprint",
+      "Tigris Prime Barrel",
+      "Helios Prime Systems",
+      "Valkyr Prime Systems"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Lith Z1": {
+    "drops": [
+      "Fang Prime Handle",
+      "Akbronco Prime Blueprint",
+      "Mirage Prime Neuroptics",
+      "Forma Blueprint",
+      "Cernos Prime Blueprint",
+      "Zephyr Prime Systems"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "10-30",
+        "rotation": "A",
+        "chance": "10.69%"
+      },
+      {
+        "mission_type": "Bounty",
+        "tier": "10-30",
+        "rotation": "C",
+        "chance": "10.69%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "A",
+        "chance": "3.16%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Ghoul",
+        "tier": " Bounty15-25",
+        "rotation": "A",
+        "chance": "15.64%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "A",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "A",
+        "chance": "9.17%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Rush",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "A",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "9.68%"
+      }
+    ]
+  },
+  "Meso G1": {
+    "drops": [
+      "Braton Prime Barrel",
+      "Forma Blueprint",
+      "Venka Prime Blades",
+      "Ballistica Prime String",
+      "Silva & Aegis Prime Blade",
+      "Galatine Prime Blueprint"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "B",
+        "chance": "1.84%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "19.48%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "4.42%"
+      },
+      {
+        "mission_type": "Pursuit",
+        "tier": "Archwing",
+        "rotation": "A",
+        "chance": "5.42%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      }
+    ]
+  },
+  "Meso N5": {
+    "drops": [
+      "Braton Prime Stock",
+      "Forma Blueprint",
+      "Lex Prime Receiver",
+      "Hydroid Prime Blueprint",
+      "Tigris Prime Receiver",
+      "Nekros Prime Systems"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "B",
+        "chance": "1.84%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "19.48%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "4.42%"
+      },
+      {
+        "mission_type": "Pursuit",
+        "tier": "Archwing",
+        "rotation": "A",
+        "chance": "5.42%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      }
+    ]
+  },
+  "Meso O2": {
+    "drops": [
+      "Tiberon Prime Receiver",
+      "Paris Prime Lower Limb",
+      "Cernos Prime Upper Limb",
+      "Mirage Prime Systems",
+      "Akbronco Prime Link",
+      "Oberon Prime Neuroptics"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "20-40",
+        "rotation": "A",
+        "chance": "13.4%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "B",
+        "chance": "1.84%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "19.48%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "A",
+        "chance": "4.42%"
+      },
+      {
+        "mission_type": "Pursuit",
+        "tier": "Archwing",
+        "rotation": "A",
+        "chance": "5.42%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      }
+    ]
+  },
+  "Meso T1": {
+    "drops": [
+      "Fang Prime Blueprint",
+      "Braton Prime Stock",
+      "Burston Prime Receiver",
+      "Paris Prime Upper Limb",
+      "Forma Blueprint",
+      "Tiberon Prime Barrel"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "20-40",
+        "rotation": "B",
+        "chance": "14.74%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "B",
+        "chance": "1.84%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "19.48%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "B",
+        "chance": "15.18%"
+      },
+      {
+        "mission_type": "Pursuit",
+        "tier": "Archwing",
+        "rotation": "A",
+        "chance": "5.42%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      }
+    ]
+  },
+  "Meso T2": {
+    "drops": [
+      "Lex Prime Barrel",
+      "Paris Prime Lower Limb",
+      "Forma Blueprint",
+      "Tigris Prime Receiver",
+      "Banshee Prime Blueprint",
+      "Tiberon Prime Stock"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "20-40",
+        "rotation": "C",
+        "chance": "15.63%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "B",
+        "chance": "1.84%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "10%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 1",
+        "rotation": "C",
+        "chance": "19.48%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "B",
+        "chance": "7.69%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "B",
+        "chance": "15.18%"
+      },
+      {
+        "mission_type": "Pursuit",
+        "tier": "Archwing",
+        "rotation": "A",
+        "chance": "5.42%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "8.33%"
+      }
+    ]
+  },
+  "Neo B2": {
+    "drops": [
+      "Tigris Prime Stock",
+      "Braton Prime Stock",
+      "Fang Prime Blueprint",
+      "Venka Prime Blueprint",
+      "Forma Blueprint",
+      "Banshee Prime Chassis"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Capture",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "9.48%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "2.01%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "18.97%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "B",
+        "chance": "14.29%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      }
+    ]
+  },
+  "Neo B4": {
+    "drops": [
+      "Hydroid Prime Chassis",
+      "Burston Prime Stock",
+      "Forma Blueprint",
+      "Kronen Prime Handle",
+      "Tigris Prime Barrel",
+      "Banshee Prime Systems"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "30-50",
+        "rotation": "B",
+        "chance": "15.63%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "2.01%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Ghoul",
+        "tier": " Bounty40-50",
+        "rotation": "A",
+        "chance": "10.29%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "C",
+        "chance": "5.64%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "B",
+        "chance": "5.53%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "B",
+        "chance": "14.29%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      }
+    ]
+  },
+  "Neo K1": {
+    "drops": [
+      "Euphona Prime Blueprint",
+      "Silva & Aegis Prime Hilt",
+      "Valkyr Prime Blueprint",
+      "Helios Prime Blueprint",
+      "Zephyr Prime Chassis",
+      "Kogake Prime Gauntlet"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "30-50",
+        "rotation": "A",
+        "chance": "15.63%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "2.01%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Ghoul",
+        "tier": " Bounty40-50",
+        "rotation": "A",
+        "chance": "15.64%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "B",
+        "chance": "5.53%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "B",
+        "chance": "14.29%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      }
+    ]
+  },
+  "Neo M1": {
+    "drops": [
+      "Akbolto Prime Blueprint",
+      "Bronco Prime Blueprint",
+      "Paris Prime String",
+      "Euphona Prime Barrel",
+      "Helios Prime Blueprint",
+      "Mirage Prime Blueprint"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "2.01%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "18.97%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "B",
+        "chance": "14.29%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      }
+    ]
+  },
+  "Neo S7": {
+    "drops": [
+      "Banshee Prime Neuroptics",
+      "Fang Prime Blade",
+      "Helios Prime Carapace",
+      "Ballistica Prime Receiver",
+      "Sybaris Prime Receiver",
+      "Silva & Aegis Prime Guard"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "2.01%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "C",
+        "chance": "5.64%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "B",
+        "chance": "5.53%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "B",
+        "chance": "14.29%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      }
+    ]
+  },
+  "Neo Z1": {
+    "drops": [
+      "Orthos Prime Handle",
+      "Nekros Prime Chassis",
+      "Paris Prime Blueprint",
+      "Forma Blueprint",
+      "Galatine Prime Handle",
+      "Zephyr Prime Blueprint"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "30-50",
+        "rotation": "C",
+        "chance": "14.29%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Dark Sector",
+        "rotation": "C",
+        "chance": "2.01%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "6.67%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Onslaught",
+        "rotation": "C",
+        "chance": "15.49%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "18.97%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "A",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Kuva",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Spy",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "3.76%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "B",
+        "chance": "14.29%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 2",
+        "rotation": "C",
+        "chance": "12.91%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "7.14%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "B",
+        "chance": "16.67%"
+      }
+    ]
+  },
+  "Axi A3": {
+    "drops": [
+      "Braton Prime Barrel",
+      "Helios Prime Carapace",
+      "Kogake Prime Boot",
+      "Cernos Prime String",
+      "Hydroid Prime Neuroptics",
+      "Akbolto Prime Receiver"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "2.46%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  },
+  "Axi E2": {
+    "drops": [
+      "Paris Prime Blueprint",
+      "Lex Prime Receiver",
+      "Braton Prime Stock",
+      "Bronco Prime Barrel",
+      "Forma Blueprint",
+      "Euphona Prime Receiver"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "2.46%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  },
+  "Axi H3": {
+    "drops": [
+      "Kronen Prime Blueprint",
+      "Cernos Prime Grip",
+      "Helios Prime Carapace",
+      "Burston Prime Barrel",
+      "Forma Blueprint",
+      "Hydroid Prime Systems"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "40-60",
+        "rotation": "C",
+        "chance": "27.54%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "2.46%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  },
+  "Axi K2": {
+    "drops": [
+      "Orthos Prime Handle",
+      "Sybaris Prime Blueprint",
+      "Forma Blueprint",
+      "Cernos Prime String",
+      "Galatine Prime Handle",
+      "Kronen Prime Blade"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "40-60",
+        "rotation": "A",
+        "chance": "27.54%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "2.46%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  },
+  "Axi N5": {
+    "drops": [
+      "Euphona Prime Blueprint",
+      "Lex Prime Barrel",
+      "Oberon Prime Chassis",
+      "Helios Prime Systems",
+      "Nekros Prime Neuroptics",
+      "Nami Skyla Prime Blade"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "2.46%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  },
+  "Axi O2": {
+    "drops": [
+      "Galatine Prime Blade",
+      "Paris Prime String",
+      "Fang Prime Blade",
+      "Tiberon Prime Blueprint",
+      "Helios Prime Systems",
+      "Oberon Prime Systems"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Bounty",
+        "tier": "40-60",
+        "rotation": "B",
+        "chance": "27.54%"
+      },
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Onslaught",
+        "tier": "Elite Onslaught",
+        "rotation": "C",
+        "chance": "2.46%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  },
+  "Axi V6": {
+    "drops": [
+      "Ballistica Prime Lower Limb",
+      "Braton Prime Blueprint",
+      "Forma Blueprint",
+      "Fang Prime Handle",
+      "Galatine Prime Handle",
+      "Valkyr Prime Chassis"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  },
+  "Axi V7": {
+    "drops": [
+      "Lex Prime Barrel",
+      "Nami Skyla Prime Blueprint",
+      "Valkyr Prime Blueprint",
+      "Kogake Prime Blueprint",
+      "Silva & Aegis Prime Blueprint",
+      "Venka Prime Gauntlet"
+    ],
+    "drop_locations": [
+      {
+        "mission_type": "Defection",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Defense",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Excavation",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Archwing",
+        "rotation": "C",
+        "chance": "8.6%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "B",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Interception",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "12.5%"
+      },
+      {
+        "mission_type": "Salvage",
+        "tier": "All",
+        "rotation": "B",
+        "chance": "6.25%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Dark Sector 4",
+        "rotation": "C",
+        "chance": "11.11%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Derelict",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 3",
+        "rotation": "C",
+        "chance": "9.68%"
+      },
+      {
+        "mission_type": "Survival",
+        "tier": "Tier 4",
+        "rotation": "C",
+        "chance": "12.5%"
+      }
+    ]
+  }
+}
