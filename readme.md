@@ -6,7 +6,3 @@
 * Get relics for part drops
 * Get void trader info
 
-
-## Dependencies
-* request
-* cheerio
