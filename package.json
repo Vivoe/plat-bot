@@ -1,0 +1,11 @@
+{
+  "name": "platbot",
+  "version": "1.0.0",
+  "description": "Plat to CAD",
+  "main": "plat.js",
+  "author": "Justin Ng",
+  "dependencies": {
+    "discord.io": "github:woor/discord.io#gateway_v6",
+    "winston": "^2.4.2"
+  }
+}
