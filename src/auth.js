@@ -35,7 +35,7 @@ exports.authenticate = function(channelID){
 
     if (!initialized) throw "Auth not initialized!";
 
-    if (admin_channels.indexOf(channelID) >= 0){
+    if (admin_channels === '*' || admin_channels.indexOf(channelID) >= 0){
         return 2;
     } else if (channels.indexOf(channelID) >= 0){
         return 1;

@@ -54,7 +54,7 @@ extract_relic_details = function($, relic){
 }
 
 part_to_relic_mapping = function(relic_details){
-    
+
     var parts = {};
 
     for (var relic in relic_details){
@@ -93,8 +93,8 @@ exports.update_relic_info = function(callback){
 
         var parts_details = part_to_relic_mapping(relic_details);
 
-        fs.writeFileSync('relic_table.json', JSON.stringify(relic_details, null, 2));
-        fs.writeFileSync('parts_table.json', JSON.stringify(parts_details, null, 2));
+        fs.writeFileSync('data/relic_table.json', JSON.stringify(relic_details, null, 2));
+        fs.writeFileSync('data/parts_table.json', JSON.stringify(parts_details, null, 2));
 
         if (callback) callback();
     });

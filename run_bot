@@ -6,6 +6,6 @@ git pull origin master
 
 ts=$(date +%s)
 pkill -f "nodejs bot.js"
-nodejs bot.js >> logs/platbot-$ts.log &
+nodejs bot.js > logs/platbot-$ts.log 2>&1 &
 
 echo "Plat-bot running."

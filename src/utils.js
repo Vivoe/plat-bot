@@ -1,3 +1,6 @@
+var fs = require('fs');
+var relic_table_builder = require('./build_relic_tables.js');
+
 // String convience functions.
 String.prototype.pad = function(n){
     var padstr = ' '.repeat(n - this.length);
@@ -45,15 +48,14 @@ exports.idx_to_rarity = function(idx) {
 }
 
 // File loader functions.
-function load_admin_channels(){
+exports.load_admin_channels = function(){
     var admin_channels =
         fs.readFileSync('data/admin_channels.txt', 'utf8')
         .split('\n').filter((x) => x != '');
     return admin_channels;
 }
 
-function load_pricemods(){
-
+exports.load_pricemods = function(){
     if (!fs.existsSync('data/pricemods.json')){
         fs.writeFileSync('data/pricemods.json', '{}', 'utf8');
         return {};
@@ -63,11 +65,11 @@ function load_pricemods(){
     return pricemods;
 }
 
-function save_pricemods(pricemods){
+exports.save_pricemods = function(pricemods){
     fs.writeFileSync('data/pricemods.json', JSON.stringify(pricemods) + '\n', 'utf8');
 }
 
-function load_relics_table(){
+exports.load_relics_table = function(){
     if (!fs.existsSync('data/relic_table.json')){
         relic_table_builder.update_relic_info();
     }
@@ -77,7 +79,7 @@ function load_relics_table(){
     return relic_table;
 }
 
-function load_parts_table(){
+exports.load_parts_table = function(){
     if (!fs.existsSync('data/parts_table.json')){
         relic_table_builder.update_relic_info();
     }
