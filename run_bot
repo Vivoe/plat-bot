@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git pull origin master
+
 ts=$(date +%s)
 pkill "nodejs bot.js"
 nodejs bot.js >> platbot-$ts.log &
