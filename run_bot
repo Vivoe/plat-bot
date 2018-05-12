@@ -1,7 +1,11 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
 git pull origin master
 
 ts=$(date +%s)
 pkill "nodejs bot.js"
-nodejs bot.js >> platbot-$ts.log &
+nodejs bot.js >> logs/platbot-$ts.log &
+
+echo "Plat-bot running."

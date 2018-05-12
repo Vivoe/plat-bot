@@ -1,5 +1,5 @@
 var Discord = require('discord.io');
-var auth = require('./auth.json');
+var auth = require('./data/auth.json');
 var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs');
