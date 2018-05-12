@@ -1,61 +1,16 @@
 var Discord = require('discord.io');
-var auth = require('./data/auth.json');
+var auth_token = require('./data/auth.json');
 var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs');
 
+var auth = require('./src/auth.js');
 var utils = require('./src/utils.js');
 var relic_table_builder = require('./src/build_relic_tables.js');
 
-// Helper functions.
-function load_admin_channels(){
-    var admin_channels = 
-        fs.readFileSync('data/admin_channels.txt', 'utf8')
-        .split('\n').filter((x) => x != '');
-    return admin_channels;
-}
-
-function load_pricemods(){
-
-    if (!fs.existsSync('data/pricemods.json')){
-        fs.writeFileSync('data/pricemods.json', '{}', 'utf8');
-        return {};
-    }
-
-    var pricemods = JSON.parse(fs.readFileSync('data/pricemods.json', 'utf8'));
-    return pricemods;
-}
-
-function save_pricemods(pricemods){
-    fs.writeFileSync('data/pricemods.json', JSON.stringify(pricemods) + '\n', 'utf8');
-}
-
-function load_relics_table(){
-    if (!fs.existsSync('data/relic_table.json')){
-        relic_table_builder.update_relic_info();
-    }
-
-    var relic_table = JSON.parse(fs.readFileSync('data/relic_table.json'));
-
-    return relic_table;
-}
-
-function load_parts_table(){
-    if (!fs.existsSync('data/parts_table.json')){
-        relic_table_builder.update_relic_info();
-    }
-
-    var parts_table = JSON.parse(fs.readFileSync('data/parts_table.json'));
-
-    return parts_table;
-}
-
-var admin_only = false;
-
-
 // Create bot.
 var bot = new Discord.Client({
-    token: auth.token,
+    token: auth_token.token,
     autorun: true
 });
 
@@ -66,24 +21,23 @@ bot.on('ready', function(evt){
     console.log('Connected');
     console.log('Logged in as: ');
     console.log(bot.username + ' - (' + bot.id + ')');
-});
 
+    auth.init_auth(bot);
+});
 
 // Bot actions.
 bot.on('message', function(user, userID, channelID, message, evt){
 
+    // Ignore self-messages.
     if (user == 'plat-bot'){
         return;
     }
- 
 
-    var channel_name = bot.channels[channelID]['name'];
-    var admin_channels = load_admin_channels();
+    // Channel authentication.
+    var auth_level = auth.authenticate(channelID);
 
-    if (admin_only && admin_channels.indexOf(channel_name) == -1){
-        console.log('Ignoring command from channel ' + channel_name);
-        return;
-    }
+    // Channel not authorized.
+    if (auth_level <= 0) return;
 
     message = message.toLowerCase();
 
@@ -94,23 +48,14 @@ bot.on('message', function(user, userID, channelID, message, evt){
     var platmatch = platregex.exec(message);
     var partmatch = partregex.exec(message);
     var relicmatch = relicregex.exec(message);
-    
+
     // Admin commands.
-    if (message.substring(0, 2) == '!!'){
+    if (auth_level >= 2 && message.substring(0, 2) == '!!'){
         console.log("Admin command");
         console.log('MESSAGE: ' + message);
-        // Authenticating channel.
-        var channel_name = bot.channels[channelID]['name'];
-        var admin_channels = load_admin_channels();
-        console.log(admin_channels);
-
-        if (admin_channels.indexOf(channel_name) == -1){
-            console.log('Ignoring command from channel ' + channel_name);
-            return
-        }
 
         var tokens = message.split(' ');
-        
+
         if (tokens[0] == '!!help'){
             bot.sendMessage({
                 to: channelID,
@@ -181,13 +126,13 @@ bot.on('message', function(user, userID, channelID, message, evt){
             bot.sendMessage({
                 to: channelID,
                 message:
-                    'Command list:\n' + 
+                    'Command list:\n' +
                     '!voidtrader\n' +
                     '!updaterelics\n' +
                     '!listrelics\n'
             });
         } else if (tokens[0] == '!voidtrader'){
-            
+
             var traderurl = 'http://deathsnacks.com/wf/data/voidtraders.json';
             request(traderurl, function(error, response, body){
                 var traderdata = JSON.parse(body)[0];
@@ -215,7 +160,7 @@ bot.on('message', function(user, userID, channelID, message, evt){
         } else if (tokens[0] == '!listrelics'){
             var relics_table = load_relics_table();
             var relics = Object.keys(relics_table);
-            
+
             bot.sendMessage({
                 to: channelID,
                 message: 'Currently droppable relics:\n' +
@@ -249,14 +194,14 @@ bot.on('message', function(user, userID, channelID, message, evt){
         var relicname = era + ' ' + type;
 
         var relic_table = load_relics_table();
-        var drops = relic_table[relicname]['drops']; 
+        var drops = relic_table[relicname]['drops'];
         var locs = relic_table[relicname]['drop_locations'];
 
         // Relic drops
         bot.sendMessage({
             to: channelID,
-            message: 'Drops for relic ' + relicname + ':\n' + '```' + 
-                'Common:\n' + 
+            message: 'Drops for relic ' + relicname + ':\n' + '```' +
+                'Common:\n' +
                 '\t' + drops[0] + '\n' +
                 '\t' + drops[1] + '\n' +
                 '\t' + drops[2] + '\n' +
@@ -266,22 +211,22 @@ bot.on('message', function(user, userID, channelID, message, evt){
                 'Rare:\n' +
                 '\t' + drops[5] + '\n' + '```'
         });
- 
+
         // Relic locations
         var tablestr = '';
         var locmatches = null;
- 
+
         for (var i = 0; i < locs.length; i++){
             var loc = locs[i];
 
-            tablestr += 
+            tablestr +=
                 loc['mission_type'].pad(17) + '| ' +
                 loc['tier'].pad(17) + '| ' +
                 loc['rotation'].pad(9) + '| ' +
                 loc['chance'].pad(10) + '\n'
         }
- 
- 
+
+
         bot.sendMessage({
             to: channelID,
             message: relicname + ' drop locations:\n' + '```' +
@@ -299,14 +244,14 @@ bot.on('message', function(user, userID, channelID, message, evt){
         var item_id = utils.to_itemid(item);
         console.log("Item: " + item);
         console.log("Item ID: " + item_id);
-        
+
         // Get link to relics if possible.
         var parts_table = load_parts_table();
         if (item_id in parts_table){
             bot.sendMessage({
                 to: channelID,
-                message: 'Item ' + item + 
-                    ' is dropped by ' + 
+                message: 'Item ' + item +
+                    ' is dropped by ' +
                     parts_table[item_id].join(', ') + '.'
             });
         }
@@ -319,33 +264,33 @@ bot.on('message', function(user, userID, channelID, message, evt){
             var price = pricemods[item_id]['price'];
             bot.sendMessage({
                 to: channelID,
-                message: 'Market price for ' + 
-                    item + ': ' + price + ' plat.'        
+                message: 'Market price for ' +
+                    item + ': ' + price + ' plat.'
             });
 
         } else {
 
             var url = 'https://api.warframe.market/v1/items/' + item_id + '/orders?include=item';
-    
+
             request(url, function(error, response, body){
                 try {
                     var json = JSON.parse(body);
-            
+
                     var prices = json['payload']['orders'].map((obj) => obj['platinum']);
-    
+
                     var mult = 1;
                     if (item_id in pricemods && 'mult' in pricemods[item_id]){
                         mult = pricemods[item_id]['mult'];
                     }
-    
+
                     var price = Math.round(utils.median(prices) * mult);
                     bot.sendMessage({
                         to: channelID,
-                        message: 'Market price for ' + 
-                            item + ': ' + price + ' plat.'        
+                        message: 'Market price for ' +
+                            item + ': ' + price + ' plat.'
                     });
 
-    
+
                 } catch (err) {
                     console.log("Bad item id.");
                     bot.sendMessage({

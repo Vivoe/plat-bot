@@ -1,3 +1,4 @@
+// String convience functions.
 String.prototype.pad = function(n){
     var padstr = ' '.repeat(n - this.length);
     return this + padstr;
@@ -24,10 +25,10 @@ exports.format_seconds = function(seconds){
     var mnts = Math.floor(seconds / 60);
     seconds  -= mnts*60;
 
-    var time_str = 
-        days + 'd ' + 
+    var time_str =
+        days + 'd ' +
         hrs + 'h ' +
-        mnts + 'm ' + 
+        mnts + 'm ' +
         seconds + 's';
 
     return time_str;
@@ -41,4 +42,47 @@ exports.idx_to_rarity = function(idx) {
     } else {
         return 'rare';
     }
+}
+
+// File loader functions.
+function load_admin_channels(){
+    var admin_channels =
+        fs.readFileSync('data/admin_channels.txt', 'utf8')
+        .split('\n').filter((x) => x != '');
+    return admin_channels;
+}
+
+function load_pricemods(){
+
+    if (!fs.existsSync('data/pricemods.json')){
+        fs.writeFileSync('data/pricemods.json', '{}', 'utf8');
+        return {};
+    }
+
+    var pricemods = JSON.parse(fs.readFileSync('data/pricemods.json', 'utf8'));
+    return pricemods;
+}
+
+function save_pricemods(pricemods){
+    fs.writeFileSync('data/pricemods.json', JSON.stringify(pricemods) + '\n', 'utf8');
+}
+
+function load_relics_table(){
+    if (!fs.existsSync('data/relic_table.json')){
+        relic_table_builder.update_relic_info();
+    }
+
+    var relic_table = JSON.parse(fs.readFileSync('data/relic_table.json'));
+
+    return relic_table;
+}
+
+function load_parts_table(){
+    if (!fs.existsSync('data/parts_table.json')){
+        relic_table_builder.update_relic_info();
+    }
+
+    var parts_table = JSON.parse(fs.readFileSync('data/parts_table.json'));
+
+    return parts_table;
 }
