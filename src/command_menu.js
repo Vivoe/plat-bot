@@ -58,7 +58,7 @@ exports.exec_command = function(bot, channelID, message, user){
     // Parse command syntax.
     message = message.toLowerCase();
 
-    var platregex = /([0-9]+)( )?(p|plat|platinum)/g;
+    var platregex = /([0-9]+)( )?(p|plat|platinum)(\.| |$)/g;
     var partregex = /{(.*)}/g;
     var relicregex = /{(lith|meso|neo|axi) ([a-z][0-9])}/g;
 
