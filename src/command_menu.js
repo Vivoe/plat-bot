@@ -50,7 +50,7 @@ commands_menu = function(bot, channelID, user, message){
                 '!part "part name"\n' +
                 '!want "part name"\n' +
                 '!remove "part name"\n' +
-                '!listwanted'
+                '!listwanted [-u | -t]'
         });
     } else if (tokens[0] == '!voidtrader'){
         cmds.void_trader(bot, channelID);
@@ -67,7 +67,7 @@ commands_menu = function(bot, channelID, user, message){
     } else if (tokens[0] == '!remove'){
         cmds.removepart(bot, channelID, user, message);
     } else if (tokens[0] == '!listwanted'){
-        cmds.list_wanted(bot, channelID);
+        cmds.list_wanted(bot, channelID, message);
     } else {
         bot.sendMessage({
             to: channelID,
@@ -98,8 +98,6 @@ exports.exec_command = function(bot, channelID, message, user){
     var relicmatch = relicregex.exec(message);
     var goodbotmatch = goodbotregex.exec(message);
     var badbotmatch = badbotregex.exec(message);
-
-
 
 
     // Admin commands.
