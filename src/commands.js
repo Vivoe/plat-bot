@@ -172,18 +172,28 @@ exports.list_wanted = function(bot, channelID, message){
 
     var tokens = utils.tokenize(message);
     var args = require('minimist')(tokens);
+    console.log(args);
 
     var wanted_list = utils.load_json(utils.path.wanted_list);
-    wanted_list.sort(function(a, b){
-        if (args.u){
-            return a.user > b.user;
-        } else if (args.t){
-            // Do not change order, already sorted in oldest first.
-            return 0;
+    var strcmp = function(a, b){
+        if (a < b){
+            return -1;
+        } else if (a > b){
+            return 1;
         } else {
-            return a.item_id > b.item_id;
+            return 0;
         }
-    });
+    }
+
+    if (!('t' in args)){
+        wanted_list.sort(function(a, b){
+            if (args.u){
+                return strcmp(a.user, b.user);
+            } else {
+                return strcmp(a.item_id, b.item_id);
+            }
+        });
+    }
 
     var user_tab = Math.max(10,
         Math.max.apply(null, wanted_list.map((x) => x.user.length)) + 5);
