@@ -90,8 +90,8 @@ exports.exec_command = function(bot, channelID, message, user){
     var platregex = /([0-9]+)( )?(p|plat|platinum)(\.| |$)/g;
     var partregex = /{(.*)}/g;
     var relicregex = /{(lith|meso|neo|axi) ([a-z][0-9])}/g;
-    var goodbotregex = /good bot/g;
-    var badbotregex = /bad bot/g;
+    var goodbotregex = /(^| )good bot($| )/g;
+    var badbotregex = /(^| )bad bot($| )/g;
 
     var platmatch = platregex.exec(message);
     var partmatch = partregex.exec(message);
