@@ -174,19 +174,13 @@ exports.list_wanted = function(bot, channelID){
         Math.max.apply(null, wanted_list.map((x) => x.item_id.length)) + 5);
 
     var drop_strings = wanted_list.map((x) => {
-        if (x){
+        if (Array.isArray(x.drop_list)){
             return x.drop_list.join(', ');
         } else {
             return '';
         }
     });
-    var drop_tab = Math.max.apply(null, drop_strings.map((x) => {
-        if (x){
-            return x.length;
-        } else {
-            return 0;
-        }
-    })) + 5;
+    var drop_tab = Math.max.apply(null, drop_strings.map((x) => x.length )) + 5;
 
     drop_tab = Math.max(20, drop_tab);
 
