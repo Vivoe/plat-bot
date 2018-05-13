@@ -134,7 +134,7 @@ exports.addpart = function(bot, channelID, user, message){
             console.log("Bad item id.");
             bot.sendMessage({
                 to: channelID,
-                message: 'Bad item name ' + item + '.'
+                message: 'Bad item name "' + item + '".'
             });
         }
     });
@@ -168,8 +168,19 @@ exports.removepart = function(bot, channelID, user, message){
     });
 }
 
-exports.list_wanted = function(bot, channelID){
+exports.list_wanted = function(bot, channelID, message){
+
+    var tokens = utils.tokenize(message);
+    var args = require('minimist')(tokens);
+
     var wanted_list = utils.load_json(utils.path.wanted_list);
+    wanted_list.sort(function(a, b){
+        if (args.u){
+            return a.user > b.user;
+        } else {
+            return a.item_id > b.item_id;
+        }
+    });
 
     var user_tab = Math.max(10,
         Math.max.apply(null, wanted_list.map((x) => x.user.length)) + 5);
@@ -192,16 +203,16 @@ exports.list_wanted = function(bot, channelID){
         var want = wanted_list[i];
 
         tablestr +=
-            want['user'].pad(user_tab) + '| ' +
             want['item_id'].pad(item_tab) + '| ' +
+            want['user'].pad(user_tab) + '| ' +
             drop_strings[i].pad(drop_tab) + '\n';
     }
 
     bot.sendMessage({
         to: channelID,
         message: 'Wanted list:\n' + '```' +
-        'User'.pad(user_tab) + '| ' +
         'Part'.pad(item_tab) + '| ' +
+        'User'.pad(user_tab) + '| ' +
         'Drop location\n' +
         '-'.repeat(user_tab + item_tab + drop_tab) + '\n' +
         tablestr + '```'
@@ -372,7 +383,7 @@ exports.parts_info = function(bot, channelID, message){
                 console.log("Bad item id.");
                 bot.sendMessage({
                     to: channelID,
-                    message: 'Bad item name ' + item + '.'
+                    message: 'Bad item name "' + item + '".'
                 });
             }
         });
