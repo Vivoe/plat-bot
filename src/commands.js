@@ -76,7 +76,9 @@ exports.help = function(bot, channelID){
             'Command list:\n' +
             '!voidtrader\n' +
             '!updaterelics\n' +
-            '!listrelics\n'
+            '!listrelics\n' +
+            '!relic "relic name" [-c]\n' +
+            '!part "part name"'
     });
 }
 
@@ -134,11 +136,28 @@ exports.plat_conversion = function(bot, channelID, message, platmatch){
     });
 }
 
-exports.relic_info = function(bot, channelID, message, relicmatch){
+exports.relic_info = function(bot, channelID, message){
     console.log("Relic")
     console.log('MESSAGE: ' + message);
-    var era = relicmatch[1].capitalize();
-    var type = relicmatch[2].capitalize();
+
+    var tokens = utils.tokenize(message);
+    var args = require('minimist')(tokens);
+
+    console.log(args);
+    if (args['_'].length != 2){
+        bot.sendMessage({
+            to: channelID,
+            message: "Invalid syntax for command !relic."
+        });
+        return;
+    }
+
+    var relic_args = args['_'][1]
+        .substring(1, args['_'][1].length - 1)
+        .split(' ');
+
+    var era = relic_args[0].capitalize();
+    var type = relic_args[1].capitalize();
     var relicname = era + ' ' + type;
 
     var relic_table = utils.load_relics_table();
@@ -171,11 +190,13 @@ exports.relic_info = function(bot, channelID, message, relicmatch){
     // Relic locations
     var locs = relic_table[relicname]['drop_locations'];
 
-    locs = locs.sort(function(a, b){
-        var a_chance = parseFloat(a['chance'].substring(0, a['chance'].length - 1));
-        var b_chance = parseFloat(b['chance'].substring(0, a['chance'].length - 1));
-        return (a_chance - b_chance);
-    });
+    if (args['c']){
+        locs = locs.sort(function(a, b){
+            var a_chance = parseFloat(a['chance'].substring(0, a['chance'].length - 1));
+            var b_chance = parseFloat(b['chance'].substring(0, a['chance'].length - 1));
+            return (a_chance - b_chance);
+        });
+    }
 
     var tablestr = '';
     for (var i = 0; i < locs.length; i++){
@@ -198,11 +219,19 @@ exports.relic_info = function(bot, channelID, message, relicmatch){
     });
 }
 
-exports.parts_info = function(bot, channelID, message, partmatch){
+exports.parts_info = function(bot, channelID, message){
     console.log("Part price");
     console.log('MESSAGE: ' + message);
 
-    var item = partmatch[1];
+    var tokens = utils.tokenize(message);
+    if (tokens.length != 2){
+        bot.sendMessage({
+            to: channelID,
+            message: "Invalid syntax for command !part."
+        });
+    }
+    var item = tokens[1].substring(1, tokens[1].length - 1);
+
     var item_id = utils.to_itemid(item);
     console.log("Item: " + item);
     console.log("Item ID: " + item_id);

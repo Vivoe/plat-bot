@@ -11,6 +11,10 @@ String.prototype.capitalize = function(){
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+exports.tokenize = function(s){
+    return s.match(/[^\s"]+|"([^"]*)"/g);
+}
+
 exports.to_itemid = function(item){
     return item.toLowerCase().replace(/ /g, '_');
 }
