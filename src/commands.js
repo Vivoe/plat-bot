@@ -106,6 +106,9 @@ exports.addpart = function(bot, channelID, user, message){
     request(url, function(error, response, body){
         try {
 
+            // Not a part if JSON is invalid.
+            JSON.parse(body);
+
             var parts_table = utils.load_json(utils.path.parts_table);
             var drop_relic_list = null;
             if (item_id in parts_table){

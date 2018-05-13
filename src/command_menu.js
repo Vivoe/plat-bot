@@ -90,10 +90,17 @@ exports.exec_command = function(bot, channelID, message, user){
     var platregex = /([0-9]+)( )?(p|plat|platinum)(\.| |$)/g;
     var partregex = /{(.*)}/g;
     var relicregex = /{(lith|meso|neo|axi) ([a-z][0-9])}/g;
+    var goodbotregex = /good bot/g;
+    var badbotregex = /bad bot/g;
 
     var platmatch = platregex.exec(message);
     var partmatch = partregex.exec(message);
     var relicmatch = relicregex.exec(message);
+    var goodbotmatch = goodbotregex.exec(message);
+    var badbotmatch = badbotregex.exec(message);
+
+
+
 
     // Admin commands.
     if (auth_level >= 2 && message.substring(0, 2) == '!!'){
@@ -102,6 +109,16 @@ exports.exec_command = function(bot, channelID, message, user){
         commands_menu(bot, channelID, user, message);
     } else if (platmatch != null){
         cmds.plat_conversion(bot, channelID, message, platmatch);
+    } else if (goodbotmatch != null){
+        bot.sendMessage({
+            to: channelID,
+            message:":blush:"
+        });
+    } else if (badbotmatch != null){
+        bot.sendMessage({
+            to: channelID,
+            message:":cry:"
+        });
     }
 }
 
