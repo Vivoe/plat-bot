@@ -152,7 +152,6 @@ exports.relic_info = function(bot, channelID, message, relicmatch){
     }
 
     var drops = relic_table[relicname]['drops'];
-    var locs = relic_table[relicname]['drop_locations'];
 
     // Relic drops
     bot.sendMessage({
@@ -170,9 +169,15 @@ exports.relic_info = function(bot, channelID, message, relicmatch){
     });
 
     // Relic locations
-    var tablestr = '';
-    var locmatches = null;
+    var locs = relic_table[relicname]['drop_locations'];
 
+    locs = locs.sort(function(a, b){
+        var a_chance = parseFloat(a['chance'].substring(0, a['chance'].length - 1));
+        var b_chance = parseFloat(b['chance'].substring(0, a['chance'].length - 1));
+        return (a_chance - b_chance);
+    });
+
+    var tablestr = '';
     for (var i = 0; i < locs.length; i++){
         var loc = locs[i];
 
