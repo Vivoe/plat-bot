@@ -39,6 +39,10 @@ commands_menu = function(bot, channelID, message){
         cmds.update_relics(bot, channelID);
     } else if (tokens[0] == '!listrelics'){
         cmds.list_relics(bot, channelID);
+    } else if (tokens[0] == '!relic'){
+        cmds.relic_info(bot, channelID, message);
+    } else if (tokens[0] == '!part'){
+        cmds.parts_info(bot, channelID, message);
     } else {
         bot.sendMessage({
             to: channelID,
@@ -73,9 +77,5 @@ exports.exec_command = function(bot, channelID, message, user){
         commands_menu(bot, channelID, message);
     } else if (platmatch != null){
         cmds.plat_conversion(bot, channelID, message, platmatch);
-    } else if (relicmatch != null){
-        cmds.relic_info(bot, channelID, message, relicmatch);
-    } else if (partmatch != null){
-        cmds.parts_info(bot, channelID, message, partmatch);
     }
 }
