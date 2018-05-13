@@ -9,7 +9,15 @@ admin_commands_menu = function(bot, channelID, message){
     var tokens = message.split(' ');
 
     if (tokens[0] == '!!help'){
-        cmds.admin_help(bot, channelID);
+        bot.sendMessage({
+            to: channelID,
+            message:
+                'Privileged command list:\n' +
+                '!!setprice itemid price\n' +
+                '!!setmult itemid mult\n' +
+                '!!listpricemods\n' +
+                '!!resetpricemods\n'
+        });
     } else if (tokens[0] == '!!setprice'){
         cmds.set_price(tokens);
     } else if (tokens[0] == '!!setmult'){
@@ -26,13 +34,24 @@ admin_commands_menu = function(bot, channelID, message){
     }
 }
 
-commands_menu = function(bot, channelID, message){
+commands_menu = function(bot, channelID, user, message){
     console.log("Public command.");
-    console.log('MESSAGE: ' + message);
     var tokens = message.split(' ');
 
     if (tokens[0] == '!help'){
-        cmds.help(bot, channelID);
+        bot.sendMessage({
+            to: channelID,
+            message:
+                'Command list:\n' +
+                '!voidtrader\n' +
+                '!updaterelics\n' +
+                '!listrelics\n' +
+                '!relic "relic name" [-c]\n' +
+                '!part "part name"\n' +
+                '!want "part name"\n' +
+                '!remove "part name"\n' +
+                '!listwanted'
+        });
     } else if (tokens[0] == '!voidtrader'){
         cmds.void_trader(bot, channelID);
     } else if (tokens[0] == '!updaterelics'){
@@ -43,6 +62,12 @@ commands_menu = function(bot, channelID, message){
         cmds.relic_info(bot, channelID, message);
     } else if (tokens[0] == '!part'){
         cmds.parts_info(bot, channelID, message);
+    } else if (tokens[0] == '!want'){
+        cmds.addpart(bot, channelID, user, message);
+    } else if (tokens[0] == '!remove'){
+        cmds.removepart(bot, channelID, user, message);
+    } else if (tokens[0] == '!listwanted'){
+        cmds.list_wanted(bot, channelID);
     } else {
         bot.sendMessage({
             to: channelID,
@@ -74,8 +99,9 @@ exports.exec_command = function(bot, channelID, message, user){
     if (auth_level >= 2 && message.substring(0, 2) == '!!'){
         admin_commands_menu(bot, channelID, message);
     } else if (message[0] == '!'){
-        commands_menu(bot, channelID, message);
+        commands_menu(bot, channelID, user, message);
     } else if (platmatch != null){
         cmds.plat_conversion(bot, channelID, message, platmatch);
     }
 }
+

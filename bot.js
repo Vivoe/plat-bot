@@ -1,6 +1,7 @@
 var Discord = require('discord.io');
 var auth_token = require('./data/auth.json');
 
+var utils = require('./src/utils.js');
 var auth = require('./src/auth.js');
 var relic_table_builder = require('./src/build_relic_tables.js');
 var cmd_menu = require('./src/command_menu.js');
@@ -19,6 +20,9 @@ bot.on('ready', function(evt){
     console.log('Logged in as: ');
     console.log(bot.username + ' - (' + bot.id + ')');
 
+    // Ensure all required files are generated.
+    utils.create_if_not_exists(utils.path.pricemods, {});
+    utils.create_if_not_exists(utils.path.wanted_list, []);
     relic_table_builder.update_relic_info();
     auth.init_auth(bot);
 });

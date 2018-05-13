@@ -6,24 +6,12 @@ var relic_table_builder = require('./build_relic_tables.js');
 /*
  * Admin commands.
  */
-exports.admin_help = function(bot, channelID){
-    bot.sendMessage({
-        to: channelID,
-        message:
-            'Privileged command list:\n' +
-            '!!setprice itemid price\n' +
-            '!!setmult itemid mult\n' +
-            '!!listpricemods\n' +
-            '!!resetpricemods\n'
-    });
-}
-
 exports.set_price = function(tokens){
     var item = tokens[1];
     var itemid = utils.to_itemid(item);
     var price = parseInt(tokens[2]);
 
-    var pricemods = utils.load_pricemods();
+    var pricemods = utils.load_json(utils.path.pricemods);
 
     if (itemid in pricemods){
         pricemods[itemid]['price'] = price;
@@ -31,7 +19,7 @@ exports.set_price = function(tokens){
         pricemods[itemid] = {'price': price};
     }
 
-    utils.save_pricemods(pricemods);
+    utils.save_json(utils.path.pricemods, pricemods);
 }
 
 exports.set_mult = function(tokens){
@@ -39,7 +27,7 @@ exports.set_mult = function(tokens){
     var itemid = utils.to_itemid(item);
     var mult = parseFloat(tokens[2]);
 
-    var pricemods = utils.load_pricemods();
+    var pricemods = utils.load_json(utils.path.pricemods);
 
     if (itemid in pricemods){
         pricemods[itemid]['mult'] = mult;
@@ -47,7 +35,7 @@ exports.set_mult = function(tokens){
         pricemods[itemid] = {'mult': mult};
     }
 
-    utils.save_pricemods(pricemods);
+    utils.save_json(utils.path.pricemods, pricemods);
 }
 
 exports.list_pricemods = function(bot, channelID){
@@ -59,7 +47,7 @@ exports.list_pricemods = function(bot, channelID){
 }
 
 exports.reset_pricemods = function(bot, channelID){
-    utils.save_pricemods({});
+    utils.save_json(utils.path.pricemods, {});
     bot.sendMessage({
         to: channelID,
         message: "Price mods reset."
@@ -69,19 +57,6 @@ exports.reset_pricemods = function(bot, channelID){
 /*
  * Public commands.
  */
-exports.help = function(bot, channelID){
-    bot.sendMessage({
-        to: channelID,
-        message:
-            'Command list:\n' +
-            '!voidtrader\n' +
-            '!updaterelics\n' +
-            '!listrelics\n' +
-            '!relic "relic name" [-c]\n' +
-            '!part "part name"'
-    });
-}
-
 exports.void_trader = function(bot, channelID){
     var traderurl = 'http://deathsnacks.com/wf/data/voidtraders.json';
     request(traderurl, function(error, response, body){
@@ -102,16 +77,15 @@ exports.void_trader = function(bot, channelID){
 }
 
 exports.update_relics = function(bot, channelID){
-    relic_table_builder.update_relic_info(function(){
-        bot.sendMessage({
-            to: channelID,
-            message: 'Relic tables updated.'
-        });
+    relic_table_builder.update_relic_info();
+    bot.sendMessage({
+        to: channelID,
+        message: 'Relic tables updated.'
     });
 }
 
 exports.list_relics = function(bot, channelID){
-    var relics_table = utils.load_relics_table();
+    var relics_table = utils.load_json(utils.path.relic_table);
     var relics = Object.keys(relics_table);
 
     bot.sendMessage({
@@ -120,6 +94,119 @@ exports.list_relics = function(bot, channelID){
             relics.join('\n')
     });
 }
+
+exports.addpart = function(bot, channelID, user, message){
+    var item = utils.tokenize(message)[1];
+    var item_id = utils.to_itemid(item);
+
+    // Validate part name.
+    var url = 'https://api.warframe.market/v1/items/' +
+        item_id + '/orders?include=item';
+
+    request(url, function(error, response, body){
+        try {
+
+            var parts_table = utils.load_json(utils.path.parts_table);
+            var drop_relic_list = null;
+            if (item_id in parts_table){
+                drop_relic_list = parts_table[item_id];
+            }
+
+            var new_item = {
+                'item_id': item_id,
+                'user': user,
+                'drop_list': drop_relic_list
+            };
+
+            var wanted_list = utils.load_json(utils.path.wanted_list);
+            wanted_list.push(new_item);
+            utils.save_json(utils.path.wanted_list, wanted_list);
+
+            bot.sendMessage({
+                to: channelID,
+                message: 'Adding ' + item_id + ' to wanted list for ' + user + '.'
+            });
+
+        } catch (err) {
+            console.log("Bad item id.");
+            bot.sendMessage({
+                to: channelID,
+                message: 'Bad item name ' + item + '.'
+            });
+        }
+    });
+}
+
+exports.removepart = function(bot, channelID, user, message){
+    var item = utils.tokenize(message)[1];
+    var item_id = utils.to_itemid(item);
+
+    var wanted_list = utils.load_json(utils.path.wanted_list);
+    var drop_idx = wanted_list.findIndex(function(want){
+        return ((want.user == user) && (want.item_id == item_id));
+    });
+
+    if (drop_idx < 0){
+        bot.sendMessage({
+            to: channelID,
+            message: "Could not find entry for part " +
+            item_id + " for user " + user + "."
+        });
+        return;
+    }
+
+    wanted_list = wanted_list.splice(drop_idx, 1);
+    utils.save_json(utils.path.wanted_list, wanted_list);
+
+    bot.sendMessage({
+        to: channelID,
+        message: "Removed entry for part " +
+            item_id + " for user " + user + "."
+    });
+}
+
+exports.list_wanted = function(bot, channelID){
+    var wanted_list = utils.load_json(utils.path.wanted_list);
+
+    var user_tab = Math.max.apply(null, wanted_list.map((x) => x.user.length)) + 5;
+    var item_tab = Math.max.apply(null, wanted_list.map((x) => x.item_id.length)) + 5;
+
+    var drop_strings = wanted_list.map((x) => {
+        if (x){
+            return x.drop_list.join(', ');
+        } else {
+            return '';
+        }
+    });
+    var drop_tab = Math.max.apply(null, drop_strings.map((x) => {
+        if (x){
+            return x.length;
+        } else {
+            return 0;
+        }
+    })) + 5;
+
+    var tablestr = '';
+    for (var i = 0; i < wanted_list.length; i++){
+        var want = wanted_list[i];
+
+        tablestr +=
+            want['user'].pad(user_tab) + '| ' +
+            want['item_id'].pad(item_tab) + '| ' +
+            drop_strings[i].pad(drop_tab) + '\n';
+    }
+
+    bot.sendMessage({
+        to: channelID,
+        message: 'Wanted list:\n' + '```' +
+        'User'.pad(user_tab) + '| ' +
+        'Part'.pad(item_tab) + '| ' +
+        'Drop location\n' +
+        '-'.repeat(user_tab + item_tab + drop_tab) + '\n' +
+        tablestr + '```'
+    });
+}
+
 
 /*
  * Special syntax commands.
@@ -152,15 +239,13 @@ exports.relic_info = function(bot, channelID, message){
         return;
     }
 
-    var relic_args = args['_'][1]
-        .substring(1, args['_'][1].length - 1)
-        .split(' ');
+    var relic_args = args['_'][1].split(' ');
 
     var era = relic_args[0].capitalize();
     var type = relic_args[1].capitalize();
     var relicname = era + ' ' + type;
 
-    var relic_table = utils.load_relics_table();
+    var relic_table = utils.load_json(utils.path.relic_table);
 
     if (!(relicname in relic_table)){
         bot.sendMessage({
@@ -230,14 +315,14 @@ exports.parts_info = function(bot, channelID, message){
             message: "Invalid syntax for command !part."
         });
     }
-    var item = tokens[1].substring(1, tokens[1].length - 1);
+    var item = tokens[1];
 
     var item_id = utils.to_itemid(item);
     console.log("Item: " + item);
     console.log("Item ID: " + item_id);
 
     // Get link to relics if possible.
-    var parts_table = utils.load_parts_table();
+    var parts_table = utils.load_json(utils.path.parts_table);
     if (item_id in parts_table){
         bot.sendMessage({
             to: channelID,
@@ -249,7 +334,7 @@ exports.parts_info = function(bot, channelID, message){
 
 
     // Scamming functionality.
-    var pricemods = utils.load_pricemods();
+    var pricemods = utils.load_json(utils.path.pricemods);
 
     if (item_id in pricemods && 'price' in pricemods[item_id]){
         var price = pricemods[item_id]['price'];

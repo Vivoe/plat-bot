@@ -75,7 +75,7 @@ part_to_relic_mapping = function(relic_details){
     return parts;
 }
 
-exports.update_relic_info = function(callback){
+exports.update_relic_info = function(){
     var relicdrop_url = 'http://warframe.wikia.com/wiki/Void_Relic/DropLocationsByRelic';
 
     request(relicdrop_url, function(error, response, body){
@@ -93,9 +93,7 @@ exports.update_relic_info = function(callback){
 
         var parts_details = part_to_relic_mapping(relic_details);
 
-        fs.writeFileSync('data/relic_table.json', JSON.stringify(relic_details, null, 2));
-        fs.writeFileSync('data/parts_table.json', JSON.stringify(parts_details, null, 2));
-
-        if (callback) callback();
+        utils.save_json(utils.path.relic_table, relic_details);
+        utils.save_json(utils.path.parts_table, parts_details);
     });
 }

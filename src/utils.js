@@ -12,7 +12,14 @@ String.prototype.capitalize = function(){
 }
 
 exports.tokenize = function(s){
-    return s.match(/[^\s"]+|"([^"]*)"/g);
+    var raw_tokens = s.match(/[^\s"]+|"([^"]*)"/g);
+    return raw_tokens.map(function(s){
+        if (s[0] == '"' && s[s.length - 1] == '"'){
+            return s.substring(1, s.length - 1);
+        } else {
+            return s;
+        }
+    });
 }
 
 exports.to_itemid = function(item){
@@ -51,44 +58,28 @@ exports.idx_to_rarity = function(idx) {
     }
 }
 
-// File loader functions.
-exports.load_admin_channels = function(){
-    var admin_channels =
-        fs.readFileSync('data/admin_channels.txt', 'utf8')
-        .split('\n').filter((x) => x != '');
-    return admin_channels;
+/*
+ * File helpers.
+ */
+
+exports.path = {
+    'relic_table': 'data/relic_table.json',
+    'parts_table': 'data/parts_table.json',
+    'pricemods': 'data/pricemods.json',
+    'wanted_list': 'data/wanted_list.json'
 }
 
-exports.load_pricemods = function(){
-    if (!fs.existsSync('data/pricemods.json')){
-        fs.writeFileSync('data/pricemods.json', '{}', 'utf8');
-        return {};
+exports.load_json = function(file){
+    var json = fs.readFileSync(file, 'utf8');
+    return JSON.parse(json);
+}
+
+exports.save_json = function(file, object){
+    fs.writeFileSync(file, JSON.stringify(object, null, 2) + '\n', 'utf8');
+}
+
+exports.create_if_not_exists = function(file, object){
+    if (!fs.existsSync(file)){
+        exports.save_json(file, object);
     }
-
-    var pricemods = JSON.parse(fs.readFileSync('data/pricemods.json', 'utf8'));
-    return pricemods;
-}
-
-exports.save_pricemods = function(pricemods){
-    fs.writeFileSync('data/pricemods.json', JSON.stringify(pricemods) + '\n', 'utf8');
-}
-
-exports.load_relics_table = function(){
-    if (!fs.existsSync('data/relic_table.json')){
-        relic_table_builder.update_relic_info();
-    }
-
-    var relic_table = JSON.parse(fs.readFileSync('data/relic_table.json'));
-
-    return relic_table;
-}
-
-exports.load_parts_table = function(){
-    if (!fs.existsSync('data/parts_table.json')){
-        relic_table_builder.update_relic_info();
-    }
-
-    var parts_table = JSON.parse(fs.readFileSync('data/parts_table.json'));
-
-    return parts_table;
 }
