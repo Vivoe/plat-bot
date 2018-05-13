@@ -155,7 +155,7 @@ exports.removepart = function(bot, channelID, user, message){
         return;
     }
 
-    wanted_list = wanted_list.splice(drop_idx, 1);
+    wanted_list.splice(drop_idx, 1);
     utils.save_json(utils.path.wanted_list, wanted_list);
 
     bot.sendMessage({
@@ -168,8 +168,10 @@ exports.removepart = function(bot, channelID, user, message){
 exports.list_wanted = function(bot, channelID){
     var wanted_list = utils.load_json(utils.path.wanted_list);
 
-    var user_tab = Math.max.apply(null, wanted_list.map((x) => x.user.length)) + 5;
-    var item_tab = Math.max.apply(null, wanted_list.map((x) => x.item_id.length)) + 5;
+    var user_tab = Math.max(10,
+        Math.max.apply(null, wanted_list.map((x) => x.user.length)) + 5);
+    var item_tab = Math.max(10,
+        Math.max.apply(null, wanted_list.map((x) => x.item_id.length)) + 5);
 
     var drop_strings = wanted_list.map((x) => {
         if (x){
@@ -185,6 +187,8 @@ exports.list_wanted = function(bot, channelID){
             return 0;
         }
     })) + 5;
+
+    drop_tab = Math.max(20, drop_tab);
 
     var tablestr = '';
     for (var i = 0; i < wanted_list.length; i++){
