@@ -1,5 +1,5 @@
 var Discord = require('discord.io');
-var auth_token = require('./data/auth.json');
+var auth_token = require('./keys/auth.json');
 
 var utils = require('./src/utils.js');
 var auth = require('./src/auth.js');
