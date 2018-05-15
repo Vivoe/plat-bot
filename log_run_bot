@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ts=$(date +%s)
+./run_bot $1 > logs/run_bot-$ts.log 2>&1

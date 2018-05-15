@@ -59,9 +59,12 @@ exports.reset_pricemods = function(bot, channelID){
 exports.restart = function(bot, channelID){
     bot.sendMessage({
         to: channelID,
-        message: "Restarting bot!"
+        message: "Restarting bot, called from " + channelID
+    }, function(){
+        console.log("Restarting...");
+        exec('./log_run_bot ' + channelID);
     });
-    exec('./run_bot ' + channelID);
+
 }
 
 /*

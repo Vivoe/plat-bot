@@ -20,10 +20,10 @@ bot.on('ready', function(evt){
     console.log('Logged in as: ');
     console.log(bot.username + ' - (' + bot.id + ')');
 
-    console.log("Updated through restarts!");
+    console.log(process.argv);
 
     if (process.argv.length == 3){
-        var restartChannelID = process.argv[3];
+        var restartChannelID = process.argv[2];
         console.log("Restarted from channelID " + restartChannelID);
 
         bot.sendMessage({
