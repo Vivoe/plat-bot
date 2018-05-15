@@ -21,8 +21,8 @@ admin_commands_menu = function(bot, channelID, message){
                 '!!setmult itemid mult\n' +
                 '!!listpricemods\n' +
                 '!!resetpricemods\n' +
-                '!!restart' +
-                '!!gethosturl'
+                '!!restart\n' +
+                '!!gethosturl\n'
         });
     } else if (tokens[0] == '!!setprice'){
         cmds.set_price(tokens);
