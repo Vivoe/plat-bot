@@ -1,4 +1,5 @@
 var fs = require('fs');
+var utils = require('./utils.js');
 
 /**
  * auth.js
@@ -47,7 +48,7 @@ var initialized = false;
  *
  */
 exports.init_auth = function(bot){
-    var auth_config = require('./../data/auth_config.json');
+    var auth_config = utils.load_json('config.json');
 
     channels = get_channels_from_servers(bot, auth_config['servers']);
     admin_channels = auth_config['admin_channels'];
