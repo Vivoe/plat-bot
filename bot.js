@@ -40,5 +40,6 @@ bot.on('ready', function(evt){
 });
 
 bot.on('message', function(user, userID, channelID, message, evt){
+    console.log("Message from " + channelID);
     cmd_menu.exec_command(bot, channelID, message, user);
 });

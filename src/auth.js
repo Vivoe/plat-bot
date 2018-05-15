@@ -26,6 +26,11 @@ exports.init_auth = function(bot){
     channels = get_channels_from_servers(bot, auth_config['servers']);
     admin_channels = auth_config['admin_channels'];
 
+    console.log("Channels:");
+    console.log(channels);
+    console.log("Admin channels:");
+    console.log(admin_channels);
+
     initialized = true;
 
     console.log("Authentication initialized.")
