@@ -20,6 +20,16 @@ bot.on('ready', function(evt){
     console.log('Logged in as: ');
     console.log(bot.username + ' - (' + bot.id + ')');
 
+    if (process.argv.length == 3){
+        var restartChannelID = process.argv[3];
+        console.log("Restarted from channelID " + restartChannelID);
+
+        bot.sendMessage({
+            to: restartChannelID,
+            message: "Bot restarted!"
+        });
+    }
+    
     // Ensure all required files are generated.
     utils.create_if_not_exists(utils.path.pricemods, {});
     utils.create_if_not_exists(utils.path.wanted_list, []);

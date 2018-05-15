@@ -1,4 +1,6 @@
 start_prod_bot.sh
+package-lock.json
+npm-debug.log
 node_modules/*
 data/*
 logs/*

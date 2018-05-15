@@ -3,6 +3,8 @@ var request = require('request')
 var utils = require('./utils.js');
 var relic_table_builder = require('./build_relic_tables.js');
 
+var exec = require('child_process').exec;
+
 /*
  * Admin commands.
  */
@@ -52,6 +54,14 @@ exports.reset_pricemods = function(bot, channelID){
         to: channelID,
         message: "Price mods reset."
     });
+}
+
+exports.restart = function(bot, channelID){
+    bot.sendMessage({
+        to: channelID,
+        message: "Restarting bot!"
+    });
+    exec('./run_bot ' + channelID);
 }
 
 /*
