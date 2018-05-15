@@ -1,5 +1,9 @@
 #!/bin/bash
 
+source /home/ubuntu/.bashrc
+
+PATH=/usr/local/lib/nodejs/node-v8.11.1/bin:$PATH
+
 RESTART_CHANNEL_ID=$1
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
