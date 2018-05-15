@@ -1,0 +1,6 @@
+#!/bin/bash
+
+addr=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=$1" --output json | jq '.Reservations[0].Instances[0].PublicDnsName')
+
+addr=$(echo $addr | tr -d '"')
+echo $addr

@@ -21,7 +21,8 @@ admin_commands_menu = function(bot, channelID, message){
                 '!!setmult itemid mult\n' +
                 '!!listpricemods\n' +
                 '!!resetpricemods\n' +
-                '!!restart'
+                '!!restart' +
+                '!!gethosturl'
         });
     } else if (tokens[0] == '!!setprice'){
         cmds.set_price(tokens);
@@ -33,6 +34,8 @@ admin_commands_menu = function(bot, channelID, message){
         cmds.reset_pricemods(bot, channelID);
     } else if (tokens[0] == '!!restart'){
         cmds.restart(bot, channelID);
+    } else if (tokens[0] == '!!gethosturl'){
+        cmds.get_host_url(bot, channelID);
     } else {
         bot.sendMessage({
             to: channelID,

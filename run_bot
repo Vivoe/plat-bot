@@ -1,17 +1,20 @@
 #!/bin/bash
 
-PATH=/usr/local/lib/nodejs/node-v8.11.1/bin:$PATH
-
 RESTART_CHANNEL_ID=$1
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 
 if [ $USER == 'ubuntu' ]; then
+	PATH=/usr/local/lib/nodejs/node-v8.11.1/bin:$PATH
 	git pull origin master
 	npm install .
 else
 	echo "Not on prod!"
+fi
+
+if [ ! -d "logs" ]; then
+	mkdir logs
 fi
 
 ts=$(date +%s)

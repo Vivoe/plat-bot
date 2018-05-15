@@ -80,6 +80,25 @@ exports.restart = function(bot, channelID){
         console.log("Restarting...");
         exec('./log_run_bot ' + channelID);
     });
+}
+
+exports.get_host_url = function(bot, channelID){
+    var config = utils.load_json('config.json');
+
+    if (config.host){
+        exec('./get_aws_addr ' + config.host, function(err, stdout, stderr){
+            var url = stdout.trim();
+            bot.sendMessage({
+                to: channelID,
+                message: stdout.trim()
+            });
+        });
+    } else {
+        bot.sendMessage({
+            to: channelID,
+            message: "AWS host not configured."
+        });
+    }
 
 }
 
