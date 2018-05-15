@@ -1,6 +1,10 @@
 var cmds = require('./commands.js')
 var auth = require('./auth.js');
 
+/**
+ * Command menu for admin commands.
+ * Lists admin help and parses commands.
+ */
 admin_commands_menu = function(bot, channelID, message){
 
     console.log("Admin command");
@@ -37,6 +41,10 @@ admin_commands_menu = function(bot, channelID, message){
     }
 }
 
+/**
+ * Command menu for non-admin commands.
+ * Lists help and parses commands.
+ */
 commands_menu = function(bot, channelID, user, message){
     console.log("Public command.");
     var tokens = message.split(' ');
@@ -79,6 +87,13 @@ commands_menu = function(bot, channelID, user, message){
     }
 }
 
+/**
+ * Executes a command.
+ * Authenticates the channel and determines what type of command to be run.
+ *
+ * Commands requiring a regex match are defined here for now.
+ * Consider moving them to a separate module if it grows too much.
+ */
 exports.exec_command = function(bot, channelID, message, user){
 
     // Ignore self-messages.
@@ -91,19 +106,14 @@ exports.exec_command = function(bot, channelID, message, user){
     message = message.toLowerCase();
 
     var platregex = /([0-9]+)( )?(p|plat|platinum)(\.| |$)/g;
-    var partregex = /{(.*)}/g;
-    var relicregex = /{(lith|meso|neo|axi) ([a-z][0-9])}/g;
     var goodbotregex = /(^| )good bot($| )/g;
     var badbotregex = /(^| )bad bot($| )/g;
 
     var platmatch = platregex.exec(message);
-    var partmatch = partregex.exec(message);
-    var relicmatch = relicregex.exec(message);
     var goodbotmatch = goodbotregex.exec(message);
     var badbotmatch = badbotregex.exec(message);
 
 
-    // Admin commands.
     if (auth_level >= 2 && message.substring(0, 2) == '!!'){
         admin_commands_menu(bot, channelID, message);
     } else if (message[0] == '!'){

@@ -1,5 +1,19 @@
 var fs = require('fs');
 
+/**
+ * auth.js
+ *
+ * Gets which channels are authorized for the bot to listen to.
+ * Also determines which channels are to be authorized as admin.
+ *
+ * REFACTOR NOTICE: Turn into auth object instead of a global thing!
+ */
+
+/**
+ * Gets the authorized channels.
+ * Currently can only whitelist entire servers for general channels.
+ *
+ */
 get_channels_from_servers = function(bot, servers){
     var channels = []
 
@@ -20,6 +34,18 @@ var channels = undefined;
 var admin_channels = undefined;
 var initialized = false;
 
+/**
+ * Reads the auth configuration file, gets the valid channels and admin channels.
+ *
+ * auth_config.json:
+ *
+ * {
+ *    "servers": ["serverID"],
+ *    "admin_channels": ["channelID"] | "*"
+ * }
+ * Set admin_channels to "*" for all channels to have admin access.
+ *
+ */
 exports.init_auth = function(bot){
     var auth_config = require('./../data/auth_config.json');
 
@@ -36,6 +62,12 @@ exports.init_auth = function(bot){
     console.log("Authentication initialized.")
 }
 
+/**
+ * Returns an int based on authentication level.
+ * 0: Not authorized
+ * 1: General authorization
+ * 2: Admin
+ */
 exports.authenticate = function(channelID){
 
     if (!initialized) throw "Auth not initialized!";
