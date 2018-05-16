@@ -88,10 +88,17 @@ exports.get_host_url = function(bot, channelID){
     if (config.host){
         exec('./get_aws_addr ' + config.host, function(err, stdout, stderr){
             var url = stdout.trim();
-            bot.sendMessage({
-                to: channelID,
-                message: stdout.trim()
-            });
+            if (url == "null"){
+                bot.sendMessage({
+                    to: channelID,
+                    message: "Error: Host name misconfigured."
+                });
+            } else {
+                bot.sendMessage({
+                    to: channelID,
+                    message: stdout.trim()
+                });
+            }
         });
     } else {
         bot.sendMessage({
