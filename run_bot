@@ -1,14 +1,24 @@
 #!/bin/bash
-restartChannel=$1
+
+RESTART_CHANNEL_ID=$1
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
-git pull origin master
 
-npm install .
+if [ $USER == 'ubuntu' ]; then
+	PATH=/usr/local/lib/nodejs/node-v8.11.1/bin:$PATH
+	git pull origin master
+	npm install .
+else
+	echo "Not on prod!"
+fi
+
+if [ ! -d "logs" ]; then
+	mkdir logs
+fi
 
 ts=$(date +%s)
-pkill -f "nodejs bot.js"
-nodejs bot.js $1 > logs/platbot-$ts.log 2>&1 &
+pkill -f "node bot.js"
+node bot.js $RESTART_CHANNEL_ID > logs/platbot-$ts.log 2>&1 &
 
 echo "Plat-bot running."

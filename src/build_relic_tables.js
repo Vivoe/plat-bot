@@ -4,6 +4,30 @@ var cheerio = require('cheerio');
 
 var utils = require('./utils.js');
 
+/**
+ * build_relic_tables.js
+ *
+ * Scrapes the Warframe wiki for active relics and their drop tables/locations.
+ */
+
+ /**
+  * Given the cheerio html object and the relic name,
+  *    build an object for the given relic:
+  {
+    'drops': [
+        part_common, part_common, part_common,
+        part_uncommon, part_uncommon,
+        part_rare
+    ],
+    'drop_locations':{
+        'mission_type': "mission type",
+        "tier": "tier",
+        "Rotation": "Rotation",
+        "chance": "Chance"
+    }
+  }
+  *
+  */
 extract_relic_details = function($, relic){
 
     var tokens = relic.split(' ');
@@ -16,7 +40,8 @@ extract_relic_details = function($, relic){
     var drops = raw_drops
         .filter((x) => x != '')
         .map((s) => s.trim())
-        .map((part) => { // Removing blueprint from warframe prime parts.
+        // Removing blueprint from warframe prime parts to match warframe.market.
+        .map((part) => {
             if (part.match('(Systems|Chassis|Neuroptics) Blueprint$')){
                 return part.substring(0, part.length - 10);
             } else {
@@ -59,6 +84,10 @@ extract_relic_details = function($, relic){
     return relic_details;
 }
 
+/*
+ * Given a dict to all the relic details, create a new mapping from
+ *    part to relic list.
+ */
 part_to_relic_mapping = function(relic_details){
 
     var parts = {};
@@ -81,22 +110,29 @@ part_to_relic_mapping = function(relic_details){
     return parts;
 }
 
+/*
+ * Get the dict of relic details and the part to relic mapping, and save to file.
+ */
 exports.update_relic_info = function(){
     var relicdrop_url = 'http://warframe.wikia.com/wiki/Void_Relic/DropLocationsByRelic';
 
+    // Load html.
     request(relicdrop_url, function(error, response, body){
         const $ = cheerio.load(body);
 
+        // Get list of relics. Note that this page only contains active relics.
         var tabletexts = $('tr', '#mw-content-text').text().split('\n');
         var relics = tabletexts.filter((l) =>
             l.match('(Lith|Meso|Neo|Axi) [A-Z][0-9]')).map((s) => s.trim());
 
         var relic_details = {};
 
+        // Get relic details for all found relics.
         for (var i = 0; i < relics.length; i++){
            relic_details[relics[i]] = extract_relic_details($, relics[i]);
         }
 
+        // Transform and create the parts-based mapping.
         var parts_details = part_to_relic_mapping(relic_details);
 
         utils.save_json(utils.path.relic_table, relic_details);

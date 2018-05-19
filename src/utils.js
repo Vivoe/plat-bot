@@ -62,6 +62,7 @@ exports.idx_to_rarity = function(idx) {
  * File helpers.
  */
 
+// Might be good to move to a separate file location for general config.
 exports.path = {
     'relic_table': 'data/relic_table.json',
     'parts_table': 'data/parts_table.json',

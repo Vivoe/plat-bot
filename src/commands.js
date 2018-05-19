@@ -5,9 +5,20 @@ var relic_table_builder = require('./build_relic_tables.js');
 
 var exec = require('child_process').exec;
 
+/**
+ * commands.js
+ *
+ * Contains all the functions for the commands after primary parsing.
+ *
+ * Consider separating this into separate files (command, admin_command, etc)
+ *
+ */
+
 /*
  * Admin commands.
  */
+
+ // Sets the price of a given part.
 exports.set_price = function(tokens){
     var item = tokens[1];
     var itemid = utils.to_itemid(item);
@@ -24,6 +35,7 @@ exports.set_price = function(tokens){
     utils.save_json(utils.path.pricemods, pricemods);
 }
 
+// Sets the price multiplier for a given part.
 exports.set_mult = function(tokens){
     var item = tokens[1];
     var itemid = utils.to_itemid(item);
@@ -40,6 +52,7 @@ exports.set_mult = function(tokens){
     utils.save_json(utils.path.pricemods, pricemods);
 }
 
+// Lists the price modifications.
 exports.list_pricemods = function(bot, channelID){
     var pricemods = utils.load_pricemods();
     bot.sendMessage({
@@ -48,6 +61,7 @@ exports.list_pricemods = function(bot, channelID){
     });
 }
 
+// Resets all price modifications.
 exports.reset_pricemods = function(bot, channelID){
     utils.save_json(utils.path.pricemods, {});
     bot.sendMessage({
@@ -56,17 +70,50 @@ exports.reset_pricemods = function(bot, channelID){
     });
 }
 
+// Restarts the bot server.
+// Should update to master verion on GitHub.
 exports.restart = function(bot, channelID){
     bot.sendMessage({
         to: channelID,
-        message: "Restarting bot!"
+        message: "Restarting bot."
+    }, function(){
+        console.log("Restarting...");
+        exec('./log_run_bot ' + channelID);
     });
-    exec('./run_bot ' + channelID);
+}
+
+exports.get_host_url = function(bot, channelID){
+    var config = utils.load_json('config.json');
+
+    if (config.host){
+        exec('./get_aws_addr ' + config.host, function(err, stdout, stderr){
+            var url = stdout.trim();
+            if (url == "null"){
+                bot.sendMessage({
+                    to: channelID,
+                    message: "Error: Host name misconfigured."
+                });
+            } else {
+                bot.sendMessage({
+                    to: channelID,
+                    message: stdout.trim()
+                });
+            }
+        });
+    } else {
+        bot.sendMessage({
+            to: channelID,
+            message: "AWS host not configured."
+        });
+    }
+
 }
 
 /*
  * Public commands.
  */
+
+ // Gets void trader info.
 exports.void_trader = function(bot, channelID){
     var traderurl = 'http://deathsnacks.com/wf/data/voidtraders.json';
     request(traderurl, function(error, response, body){
@@ -86,6 +133,7 @@ exports.void_trader = function(bot, channelID){
     });
 }
 
+// Updates cached relic info.
 exports.update_relics = function(bot, channelID){
     relic_table_builder.update_relic_info();
     bot.sendMessage({
@@ -94,6 +142,7 @@ exports.update_relics = function(bot, channelID){
     });
 }
 
+// Lists all currently active relics.
 exports.list_relics = function(bot, channelID){
     var relics_table = utils.load_json(utils.path.relic_table);
     var relics = Object.keys(relics_table);
@@ -105,6 +154,7 @@ exports.list_relics = function(bot, channelID){
     });
 }
 
+// Adds a part to the wanted list.
 exports.addpart = function(bot, channelID, user, message){
     var item = utils.tokenize(message)[1];
     var item_id = utils.to_itemid(item);
@@ -119,6 +169,7 @@ exports.addpart = function(bot, channelID, user, message){
             // Not a part if JSON is invalid.
             JSON.parse(body);
 
+            // If the part drops from an active relic, list them.
             var parts_table = utils.load_json(utils.path.parts_table);
             var drop_relic_list = null;
             if (item_id in parts_table){
@@ -131,6 +182,7 @@ exports.addpart = function(bot, channelID, user, message){
                 'drop_list': drop_relic_list
             };
 
+            // Save to wanted list file.
             var wanted_list = utils.load_json(utils.path.wanted_list);
             wanted_list.push(new_item);
             utils.save_json(utils.path.wanted_list, wanted_list);
@@ -150,6 +202,8 @@ exports.addpart = function(bot, channelID, user, message){
     });
 }
 
+// Removes a part from the wanted list.
+// Only remove if the user who added it removes it.
 exports.removepart = function(bot, channelID, user, message){
     var item = utils.tokenize(message)[1];
     var item_id = utils.to_itemid(item);
@@ -168,6 +222,7 @@ exports.removepart = function(bot, channelID, user, message){
         return;
     }
 
+    // Remove and save.
     wanted_list.splice(drop_idx, 1);
     utils.save_json(utils.path.wanted_list, wanted_list);
 
@@ -178,12 +233,15 @@ exports.removepart = function(bot, channelID, user, message){
     });
 }
 
+// Print out the wanted list.
+// -t for time based sorting, -u for user, default sorting by part.
 exports.list_wanted = function(bot, channelID, message){
 
     var tokens = utils.tokenize(message);
     var args = require('minimist')(tokens);
     console.log(args);
 
+    // Sorting methods for the list.
     var wanted_list = utils.load_json(utils.path.wanted_list);
     var strcmp = function(a, b){
         if (a < b){
@@ -205,6 +263,7 @@ exports.list_wanted = function(bot, channelID, message){
         });
     }
 
+    // Formatting and spacing for prettyprinting.
     var user_tab = Math.max(10,
         Math.max.apply(null, wanted_list.map((x) => x.user.length)) + 5);
     var item_tab = Math.max(10,
@@ -258,6 +317,7 @@ exports.plat_conversion = function(bot, channelID, message, platmatch){
     });
 }
 
+// Gets relic information.
 exports.relic_info = function(bot, channelID, message){
     console.log("Relic")
     console.log('MESSAGE: ' + message);
@@ -274,6 +334,7 @@ exports.relic_info = function(bot, channelID, message){
         return;
     }
 
+    // Parse out relic name.
     var relic_args = args['_'][1].split(' ');
 
     var era = relic_args[0].capitalize();
@@ -282,6 +343,7 @@ exports.relic_info = function(bot, channelID, message){
 
     var relic_table = utils.load_json(utils.path.relic_table);
 
+    // Confirm command, validate that it's currently dropping/is cached.
     if (!(relicname in relic_table)){
         bot.sendMessage({
             to: channelID,
@@ -290,9 +352,10 @@ exports.relic_info = function(bot, channelID, message){
         return;
     }
 
+    // Print relic drops.
     var drops = relic_table[relicname]['drops'];
 
-    // Relic drops
+
     bot.sendMessage({
         to: channelID,
         message: 'Drops for relic ' + relicname + ':\n' + '```' +
@@ -307,7 +370,7 @@ exports.relic_info = function(bot, channelID, message){
             '\t' + drops[5] + '\n' + '```'
     });
 
-    // Relic locations
+    // Print relic locations
     var locs = relic_table[relicname]['drop_locations'];
 
     if (args['c']){
@@ -318,6 +381,7 @@ exports.relic_info = function(bot, channelID, message){
         });
     }
 
+    // Prettyprinting
     var tablestr = '';
     for (var i = 0; i < locs.length; i++){
         var loc = locs[i];
@@ -339,10 +403,12 @@ exports.relic_info = function(bot, channelID, message){
     });
 }
 
+// Get information for parts.
 exports.parts_info = function(bot, channelID, message){
     console.log("Part price");
     console.log('MESSAGE: ' + message);
 
+    // Parsing part name.
     var tokens = utils.tokenize(message);
     if (tokens.length != 2){
         bot.sendMessage({
@@ -368,7 +434,7 @@ exports.parts_info = function(bot, channelID, message){
     }
 
 
-    // Scamming functionality.
+    // Scamming functionality: Set price
     var pricemods = utils.load_json(utils.path.pricemods);
 
     if (item_id in pricemods && 'price' in pricemods[item_id]){
@@ -385,15 +451,19 @@ exports.parts_info = function(bot, channelID, message){
 
         request(url, function(error, response, body){
             try {
+                // This will error if the part is not a valid part.
+                // Error is caught below and an error message is printed.
                 var json = JSON.parse(body);
 
                 var prices = json['payload']['orders'].map((obj) => obj['platinum']);
 
+                // Scamming: Set price multiplier
                 var mult = 1;
                 if (item_id in pricemods && 'mult' in pricemods[item_id]){
                     mult = pricemods[item_id]['mult'];
                 }
 
+                // Use median price.
                 var price = Math.round(utils.median(prices) * mult);
                 bot.sendMessage({
                     to: channelID,
