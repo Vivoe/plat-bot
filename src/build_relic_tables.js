@@ -53,8 +53,6 @@ extract_relic_details = function($, relic){
     var loc_selector = "[title='" + era + "'] tr:contains('" + type + "') tbody tr";
     var raw_locs = $(loc_selector).text().split('\n').filter((x) => x != '');
 
-    console.log(raw_locs);
-
     var locs = [];
 
     // First 4 rows are not what we want.
