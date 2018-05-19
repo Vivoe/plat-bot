@@ -28,12 +28,18 @@ extract_relic_details = function($, relic){
     var loc_selector = "[title='" + era + "'] tr:contains('" + type + "') tbody tr";
     var raw_locs = $(loc_selector).text().split('\n').filter((x) => x != '');
 
+    console.log(raw_locs);
+
     var locs = [];
 
     // First 4 rows are not what we want.
     for (var i = 4; i < raw_locs.length; i++){
         var locsregex = /([A-Z][a-z]+)([a-zA-Z\- 0-9]+)([ABC])([0-9]+(\.[0-9]+)?\%)/g;
         var matches = locsregex.exec(raw_locs[i]);
+
+        if (matches == null){
+            continue;
+        }
 
         var loc = {
             'mission_type': matches[1],
