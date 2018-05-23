@@ -268,42 +268,46 @@ exports.list_wanted = function(bot, channelID, message){
         });
     }
 
-    // Formatting and spacing for prettyprinting.
-    var user_tab = Math.max(10,
-        Math.max.apply(null, wanted_list.map((x) => x.user.length)) + 5);
-    var item_tab = Math.max(10,
-        Math.max.apply(null, wanted_list.map((x) => x.item_id.length)) + 5);
+    for (var iter = 0; iter < Math.ceil(wanted_list.length / 10); iter++){
+        var sub_wanted_list = wanted_list.slice(iter * 10, (iter + 1) * 10);
 
-    var drop_strings = wanted_list.map((x) => {
-        if (Array.isArray(x.drop_list)){
-            return x.drop_list.join(', ');
-        } else {
-            return '';
+        // Formatting and spacing for prettyprinting.
+        var user_tab = Math.max(10,
+            Math.max.apply(null, sub_wanted_list.map((x) => x.user.length)) + 5);
+        var item_tab = Math.max(10,
+            Math.max.apply(null, sub_wanted_list.map((x) => x.item_id.length)) + 5);
+
+        var drop_strings = sub_wanted_list.map((x) => {
+            if (Array.isArray(x.drop_list)){
+                return x.drop_list.join(', ');
+            } else {
+                return '';
+            }
+        });
+        var drop_tab = Math.max.apply(null, drop_strings.map((x) => x.length )) + 5;
+
+        drop_tab = Math.max(20, drop_tab);
+
+        var tablestr = '';
+        for (var i = 0; i < sub_wanted_list.length; i++){
+            var want = sub_wanted_list[i];
+
+            tablestr +=
+                want['item_id'].pad(item_tab) + '| ' +
+                want['user'].pad(user_tab) + '| ' +
+                drop_strings[i].pad(drop_tab) + '\n';
         }
-    });
-    var drop_tab = Math.max.apply(null, drop_strings.map((x) => x.length )) + 5;
 
-    drop_tab = Math.max(20, drop_tab);
-
-    var tablestr = '';
-    for (var i = 0; i < wanted_list.length; i++){
-        var want = wanted_list[i];
-
-        tablestr +=
-            want['item_id'].pad(item_tab) + '| ' +
-            want['user'].pad(user_tab) + '| ' +
-            drop_strings[i].pad(drop_tab) + '\n';
+        bot.sendMessage({
+            to: channelID,
+            message: 'Wanted list:\n' + '```' +
+            'Part'.pad(item_tab) + '| ' +
+            'User'.pad(user_tab) + '| ' +
+            'Drop location\n' +
+            '-'.repeat(user_tab + item_tab + drop_tab) + '\n' +
+            tablestr + '```'
+        });
     }
-
-    bot.sendMessage({
-        to: channelID,
-        message: 'Wanted list:\n' + '```' +
-        'Part'.pad(item_tab) + '| ' +
-        'User'.pad(user_tab) + '| ' +
-        'Drop location\n' +
-        '-'.repeat(user_tab + item_tab + drop_tab) + '\n' +
-        tablestr + '```'
-    });
 }
 
 
