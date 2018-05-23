@@ -48,7 +48,7 @@ admin_commands_menu = function(bot, channelID, message){
  * Command menu for non-admin commands.
  * Lists help and parses commands.
  */
-commands_menu = function(bot, channelID, user, message){
+commands_menu = function(bot, channelID, message, userID){
     console.log("Public command.");
     var tokens = message.split(' ');
 
@@ -77,9 +77,9 @@ commands_menu = function(bot, channelID, user, message){
     } else if (tokens[0] == '!part'){
         cmds.parts_info(bot, channelID, message);
     } else if (tokens[0] == '!want'){
-        cmds.addpart(bot, channelID, user, message);
+        cmds.addpart(bot, channelID, userID, message);
     } else if (tokens[0] == '!remove'){
-        cmds.removepart(bot, channelID, user, message);
+        cmds.removepart(bot, channelID, userID, message);
     } else if (tokens[0] == '!listwanted'){
         cmds.list_wanted(bot, channelID, message);
     } else {
@@ -97,7 +97,7 @@ commands_menu = function(bot, channelID, user, message){
  * Commands requiring a regex match are defined here for now.
  * Consider moving them to a separate module if it grows too much.
  */
-exports.exec_command = function(bot, channelID, message, user){
+exports.exec_command = function(bot, channelID, message, user, userID){
 
     // Ignore self-messages.
     if (user == 'plat-bot') return;
@@ -120,7 +120,7 @@ exports.exec_command = function(bot, channelID, message, user){
     if (auth_level >= 2 && message.substring(0, 2) == '!!'){
         admin_commands_menu(bot, channelID, message);
     } else if (message[0] == '!'){
-        commands_menu(bot, channelID, user, message);
+        commands_menu(bot, channelID, message, userID);
     } else if (platmatch != null){
         cmds.plat_conversion(bot, channelID, message, platmatch);
     } else if (goodbotmatch != null){

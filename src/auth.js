@@ -48,10 +48,8 @@ var initialized = false;
  *
  */
 exports.init_auth = function(bot){
-    var config = utils.load_json('config.json');
-
-    channels = get_channels_from_servers(bot, config['servers']);
-    admin_channels = config['admin_channels'];
+    channels = get_channels_from_servers(bot, utils.config['servers']);
+    admin_channels = utils.config['admin_channels'];
 
     console.log("Channels:");
     console.log(channels);

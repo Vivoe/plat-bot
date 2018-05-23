@@ -84,3 +84,6 @@ exports.create_if_not_exists = function(file, object){
         exports.save_json(file, object);
     }
 }
+
+
+exports.config = exports.load_json('config.json');

@@ -155,9 +155,11 @@ exports.list_relics = function(bot, channelID){
 }
 
 // Adds a part to the wanted list.
-exports.addpart = function(bot, channelID, user, message){
+exports.addpart = function(bot, channelID, userID, message){
     var item = utils.tokenize(message)[1];
     var item_id = utils.to_itemid(item);
+
+    var user = bot.users[userID].username
 
     // Validate part name.
     var url = 'https://api.warframe.market/v1/items/' +
@@ -179,6 +181,7 @@ exports.addpart = function(bot, channelID, user, message){
             var new_item = {
                 'item_id': item_id,
                 'user': user,
+                'userID': userID,
                 'drop_list': drop_relic_list
             };
 
@@ -204,13 +207,15 @@ exports.addpart = function(bot, channelID, user, message){
 
 // Removes a part from the wanted list.
 // Only remove if the user who added it removes it.
-exports.removepart = function(bot, channelID, user, message){
+exports.removepart = function(bot, channelID, userID, message){
     var item = utils.tokenize(message)[1];
     var item_id = utils.to_itemid(item);
 
+    var user = bot.users[userID].username
+
     var wanted_list = utils.load_json(utils.path.wanted_list);
     var drop_idx = wanted_list.findIndex(function(want){
-        return ((want.user == user) && (want.item_id == item_id));
+        return ((want.userID == userID) && (want.item_id == item_id));
     });
 
     if (drop_idx < 0){

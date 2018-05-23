@@ -5,6 +5,7 @@ var utils = require('./src/utils.js');
 var auth = require('./src/auth.js');
 var relic_table_builder = require('./src/build_relic_tables.js');
 var cmd_menu = require('./src/command_menu.js');
+var poll = require('./src/poll.js');
 
 
 /**
@@ -53,9 +54,11 @@ bot.on('ready', function(evt){
 
     // Get authorized channels and admin channels.
     auth.init_auth(bot);
+
+    poll.start_polling(bot);
 });
 
 // Adding message hooks.
 bot.on('message', function(user, userID, channelID, message, evt){
-    cmd_menu.exec_command(bot, channelID, message, user);
+    cmd_menu.exec_command(bot, channelID, message, user, userID);
 });
