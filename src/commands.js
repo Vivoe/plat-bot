@@ -268,6 +268,11 @@ exports.list_wanted = function(bot, channelID, message){
         });
     }
 
+            bot.sendMessage({
+            to: channelID,
+            message: 'Wanted list:\n'
+        });
+
     for (var iter = 0; iter < Math.ceil(wanted_list.length / 10); iter++){
         var sub_wanted_list = wanted_list.slice(iter * 10, (iter + 1) * 10);
 
@@ -300,7 +305,7 @@ exports.list_wanted = function(bot, channelID, message){
 
         bot.sendMessage({
             to: channelID,
-            message: 'Wanted list:\n' + '```' +
+            message: '```' +
             'Part'.pad(item_tab) + '| ' +
             'User'.pad(user_tab) + '| ' +
             'Drop location\n' +
